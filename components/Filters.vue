@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-row>
+    <b-row class="pl-2 pr-2">
       <b-col sm="12" md="6">
         <b-dropdown id="brands" text="Select Brand" size="sm" menu-class="menu">
           <b-dropdown-item @click="selectedBrand = ''">{{ '---' }}</b-dropdown-item>

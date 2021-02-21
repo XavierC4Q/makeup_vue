@@ -17,7 +17,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['~/plugins/capitalize.ts', '~/plugins/bootstrap-icons.ts'],
+  plugins: ['~/plugins/capitalize.ts', '~/plugins/bootstrap-icons.ts', '~/plugins/formatPrice.ts'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -32,8 +32,14 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
+    '@nuxtjs/axios',
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+  publicRuntimeConfig: {
+    axios: {
+      baseURL: 'https://api.nuxtjs.dev',
+    },
+  },
 }
